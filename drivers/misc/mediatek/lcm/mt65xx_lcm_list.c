@@ -28,6 +28,10 @@ LCM_DRIVER *lcm_driver_list[] = {
 	&af168_otm1287a_hd720_dsi_vdo_boyi_lcm_drv,
 #endif
 
+#if defined(HX8394F_HD720_DSI_VDO_CMI) //add by vitek999
+	&hx8394f_hd720_dsi_vdo_cmi,
+#endif
+
 #if defined(HX8394F_HD720_DSI_VDO_TXD)
 	&hx8394f_hd720_dsi_vdo_txd,
 #endif
