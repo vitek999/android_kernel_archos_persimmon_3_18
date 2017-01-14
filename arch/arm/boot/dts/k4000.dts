@@ -20,6 +20,21 @@ memory@00000000 {
 			reg = <0x7F000000 0x1000000>;
 		};
 
+		i2c1:i2c@11008000 {
+			compatible = "mediatek,mt6735m-i2c";
+			cell-index = <1>;
+			reg = <0x11008000 0x1000>;
+			interrupts = <GIC_SPI 85 IRQ_TYPE_LEVEL_LOW>,
+						<GIC_SPI 100 IRQ_TYPE_LEVEL_LOW>;
+			def_speed = <100>;
+
+			ncp1854@0X36 {
+				compatible = "mediatek,ncp1854", "mediatek,ncp1851";
+				reg = <0x36>;
+				status = "okay";
+			};
+		};
+
 	};
 	led0:led@0 {
 		compatible = "mediatek,red";

@@ -28,7 +28,7 @@ static int ncp1854_driver_probe(struct i2c_client *client, const struct i2c_devi
 
 #ifdef CONFIG_OF
 static const struct of_device_id ncp1854_of_match[] = {
-	{.compatible = "mediatek,swithing_charger",}, //modify by darren
+	{.compatible = "ncp1854",},
 	{},
 };
 
